@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #07090E;
+    color: #F1F5F9;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Noto Sans Devanagari', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, monospace;
+  }
+}
+
+/* Glassmorphic card surface with top highlight border */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #1E293B;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.08) inset, 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: #334155;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.12) inset, 0 16px 36px -10px rgba(0, 0, 0, 0.6);
+}
+
+.glass-panel-emerald:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 1px 0 0 rgba(16, 185, 129, 0.2) inset, 0 16px 36px -10px rgba(16, 185, 129, 0.15);
+}
+
+.glass-panel-crimson:hover {
+  border-color: rgba(239, 68, 68, 0.4);
+  box-shadow: 0 1px 0 0 rgba(239, 68, 68, 0.2) inset, 0 16px 36px -10px rgba(239, 68, 68, 0.15);
+}
+
+.glass-panel-amber:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 1px 0 0 rgba(245, 158, 11, 0.2) inset, 0 16px 36px -10px rgba(245, 158, 11, 0.15);
+}
+
+/* Custom scrollbars for dark mode */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Signal Flow Animations */
+@keyframes flowDot {
+  0% { transform: translateX(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.animate-flow-dot {
+  animation: flowDot 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "LeadGuard AI — Autonomous Ad Stop-Loss & CAPI Signal Engine",
+  "description": "Autonomous ad stop-loss and Conversions API (CAPI) signal conditioning engine that qualifies leads, blocks junk signals, and pauses bleeder ads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
